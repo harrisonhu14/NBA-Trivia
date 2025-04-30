@@ -100,7 +100,7 @@ public class PlayerGuess {
 	// Resize the image for the guessing panel
 	public ImageIcon getPlayerIcon() {
 		Image image = this.playerImage.getImage(); // transform it
-		Image newimg = image.getScaledInstance(60, 80, java.awt.Image.SCALE_SMOOTH);
+		Image newimg = image.getScaledInstance(60, 90, java.awt.Image.SCALE_SMOOTH);
 		ImageIcon newImageIcon = new ImageIcon(newimg); // assign to a new ImageIcon instance
 		return newImageIcon;
 	}
