@@ -798,7 +798,7 @@ public class FinalProjectGUI extends JPanel implements ActionListener, KeyListen
 
 		// chose the stat index and category for row 2
 		final int STATS = 3;
-		randomIndex = (int) (Math.random() * (STATS - 1));
+		randomIndex = (int) (Math.random() * (STATS));
 		chosenCategories.add(statCategories.get(randomIndex));
 
 		// chose the season index and category for row 3
@@ -814,8 +814,8 @@ public class FinalProjectGUI extends JPanel implements ActionListener, KeyListen
 	private static void categoryLabel(String rc, int a, int b, int c, int d, JLabel g) {
 		JLabel ctgLabel;
 		// If the category is 20, it means 20+ ppg season, etc.
-		if (rc.equals("20")) {
-			ctgLabel = new JLabel("20+ PPG Season");
+		if (rc.equals("15")) {
+			ctgLabel = new JLabel("15+ PPG Season");
 		} else if (rc.equals("7")) {
 			ctgLabel = new JLabel("7+ RPG Season");
 		} else if (rc.equals("5")) {
@@ -991,11 +991,11 @@ public class FinalProjectGUI extends JPanel implements ActionListener, KeyListen
 	private boolean checkCorrect(PlayerGrid searched, String row, String col) {
 		boolean result = false;
 
-		// If the category is named "20" the player must have a season of over 20 points
+		// If the category is named "15" the player must have a season of over 15 points
 		// per game
-		if (row.equals("20")) {
+		if (row.equals("15")) {
 			for (int e = 0; e < searched.getPPG().size(); e++) {
-				if (searched.getPPG().get(e) >= 7.0) {
+				if (searched.getPPG().get(e) >= 15.0) {
 					result = true;
 				}
 			}
