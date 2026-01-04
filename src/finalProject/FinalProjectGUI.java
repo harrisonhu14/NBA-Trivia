@@ -388,8 +388,8 @@ public class FinalProjectGUI extends JPanel implements ActionListener, KeyListen
 
 		int count = 0;
 
-		// loop through all 150 players to check if String s is a substring
-		for (int i = 0; i < 205; i++) {
+		// loop through all players to check if String s is a substring
+		for (int i = 0; i < SIZE; i++) {
 
 			// if it is a substring, make a new JButton
 			if (playerList.get(i).getName().toLowerCase().contains(s.toLowerCase())) {
@@ -446,7 +446,7 @@ public class FinalProjectGUI extends JPanel implements ActionListener, KeyListen
 				if (count >= 10) {
 
 					// break loop
-					i = 206;
+					i = SIZE;
 
 				}
 

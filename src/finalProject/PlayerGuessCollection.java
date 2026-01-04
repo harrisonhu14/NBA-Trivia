@@ -25,6 +25,8 @@ public class PlayerGuessCollection {
 
 //Get the information for each player from the csv file	
 	public ArrayList<PlayerGuess> readNBAFile() {
+		
+		final int SIZE = 273;
 
 		ArrayList<PlayerGuess> playerList = new ArrayList<PlayerGuess>();
 
@@ -39,8 +41,8 @@ public class PlayerGuessCollection {
 			// Skip the line containing the titles
 			br.readLine();
 
-			// Read the 205 players
-			for (int i = 0; i < 205; i++) {
+			// Read the players
+			for (int i = 0; i < SIZE; i++) {
 
 				line = br.readLine();
 
